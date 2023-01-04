@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Communications extends Human{
@@ -28,15 +27,14 @@ public class Communications extends Human{
         Communications.typeHuman = typeHuman;
     }
     public static void addTypeRelationship(String name, TypeRelationship typeRelationship, String firstname){
-        Boolean i;
-        i = humans.contains(name);
-        System.out.println(i);
+//        Boolean i = humans.contains(name);
+//        System.out.println(i);
+
         for (Human human : humans){
             if (human.getName().equals(name)){
                 System.out.println("yes");
-            }
-            else {
-                System.out.println("no");
+                typeHuman.add(typeRelationship);
+                typeHuman.add(firstname);
             }
         }
     }
